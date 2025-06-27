@@ -300,6 +300,7 @@ cmake -D CMAKE_BUILD_TYPE:STRING="${BUILD_TYPE}"   \
     -DSVF_ENABLE_ASSERTIONS:BOOL=true              \
     -DSVF_SANITIZE="${SVF_SANITIZER}"              \
     -DBUILD_SHARED_LIBS=${BUILD_DYN_LIB}            \
+    -DSVF_ENABLE_RTTI=${RTTI}                       \
     -S "${SVFHOME}" -B "${BUILD_DIR}"
 cmake --build "${BUILD_DIR}" -j ${jobs}
 
